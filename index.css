@@ -123,6 +123,20 @@ height: 100%;
 .um ul{width: 500px; }
 
 
+    .cabecalho a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.cabecalho a span {
+    margin: 0 5px;
+    color: #F3E3D3;
+    font-family: "League Spartan", sans-serif;
+    font-size: 30px;
+}
+
+
 
 .cabecalho li{
     padding-right: 50px;
