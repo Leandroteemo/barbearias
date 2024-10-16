@@ -1,0 +1,165 @@
+HTML body{
+    width: 100%;
+    height: 100%;
+    margin: 7px;
+    padding: 0%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.cabecalho{
+    position: absolute;
+    width: 99%;
+    height: 60px;
+    background-color:rgba(115, 76, 35, 0.5);;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px 15px 15px 15px ;
+}
+.cabecalho ul{
+display: flex;
+justify-content: space-between;
+margin: 0%; list-style-type: none;
+padding-left: 0px;
+}
+.zero{
+    width: 200px;
+}
+.zero p{
+    padding-left: 15px;
+    color: #F3E3D3;
+    font-family: "League Spartan", sans-serif;font-optical-sizing: auto;font-weight: weight;
+    font-style:normal;
+}
+.cabecalho ul li{
+    margin: 0px;
+}
+.cabecalho a{
+    color: #F3E3D3;
+    margin: 0%; text-decoration: none;
+    position: relative;
+    }
+.um {
+    width: 450px;
+    height: 50px;
+    align-items: center;
+    padding-right: 15px;
+    }
+.um li{
+    width: 150;
+}
+.um a{text-decoration: none;
+    width: 150px;text-align: justify;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;font-weight:weight;
+    font-style:normal; position: relative;
+    }
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #F3E3D3;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px; /* Adiciona borda arredondada */
+}
+
+a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.fundo{
+    width: 99%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flexbox;
+    z-index: 1;
+    background-size: cover;
+}
+
+.imagem {
+width: 100%;
+height: 100%;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    top: 500px;
+}
+
+.background-image:hover {
+    /* Aplica o zoom na imagem de fundo */
+    transform: scale(1.1);
+}
+
+.parte2{
+    width: 99.7%;
+    height: 1000px;
+    background-color: #F3E3D3;
+}
+
+@media (min-width:1280px){
+.cabecalho{
+    width: 100%;
+    height: 80px;
+}
+
+
+.um ul{width: 500px; }
+
+
+
+.cabecalho li{
+    padding-right: 50px;
+    width: 70px;
+}
+
+.cabecalho p{
+font-size: 45px;
+}
+
+.cabecalho a{
+    font-size: 30px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1500px) {
+    .cabecalho{
+        width: 99%;
+        height: 80px;
+    }
+
+    .um{ 
+        width: 900px;
+    }
+    
+    .cabecalho li{
+        padding-right: 50px;
+        width: 200px;
+    }
+
+    
+    .cabecalho p{
+    font-size: 45px;
+    }
+    
+    .cabecalho a{
+        font-size: 28px;
+        width: 300px;
+        }
+    }
