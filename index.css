@@ -173,11 +173,11 @@ a:hover::after {
     }
 
     .cabecalho p {
-        font-size: 45px;
+        font-size: 28px;
     }
     
     .cabecalho a {
-        font-size: 28px;
+        font-size: 21px;
         width: 300px;
     }
 }
