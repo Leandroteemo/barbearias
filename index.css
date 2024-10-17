@@ -31,7 +31,9 @@ padding-left: 0px;
 .zero p{
     padding-left: 15px;
     color: #F3E3D3;
-    font-family: "League Spartan", sans-serif;font-optical-sizing: auto;font-weight: weight;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
     font-style:normal;
 }
 .cabecalho ul li{
@@ -53,10 +55,13 @@ padding-left: 0px;
 }
 .um a{
     text-decoration: none;
-    width: 150px;text-align: justify;
+    width: 150px;
+    text-align: justify;
     font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;font-weight:weight;
-    font-style:normal; position: relative;
+    font-optical-sizing: auto;
+    font-weight:weight;
+    font-style:normal;
+    position: relative;
     }
 
 a::after {
@@ -132,11 +137,11 @@ height: 100%;
 }
 
 .cabecalho p{
-font-size: 45px;
+font-size: 28px;
 }
 
 .cabecalho a{
-    font-size: 30px;
+    font-size: 21px;
     }
 }
 
