@@ -145,7 +145,7 @@ font-size: 28px;
     }
 }
 
-@media (min-width: 1281px) and (max-width: 1500px) {
+@media (min-width: 1281px) and (max-width: 1600px) {
     .cabecalho{
         width: 99%;
         height: 50px;
