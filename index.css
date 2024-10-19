@@ -1,282 +1,88 @@
-HTML body{
+/* Estilos gerais */
+HTML body {
     height: 140vh;
     margin: 0%;
     padding: 0%;
     background-color: rgb(90, 56, 20);
     overflow-x: hidden;
 }
-/* Inicio primeira tela*/
-.cabecalho{
+
+/* Cabeçalho */
+.cabecalho {
     position: absolute;
     width: 99%;
     height: 40px;
     transform: translateY(10px);
-    background-color:rgba(115, 76, 35, 0.5);
+    background-color: rgba(115, 76, 35, 0.5);
     margin: 2px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 15px 15px 15px 15px ;
+    border-radius: 15px;
 }
 
-.cabecalho ul{
-display: flex;
-justify-content: space-between;
-margin: 0%; list-style-type: none;
-padding-left: 0px;
+/* Colocar "Dionizio" no canto superior direito */
+.zero {
+    width: 100%;
+    text-align: right;
 }
-.zero{
-    width: 200px;
-}
-.zero p{
-    padding-left: 15px;
+
+.zero p {
     color: #F3E3D3;
-    font-family: "League Spartan", sans-serif;font-optical-sizing: auto;font-weight: weight;
-    font-style:normal;
-}
-.cabecalho ul li{
-    margin: 0px;
-}
-.cabecalho a{
-    color: #F3E3D3;
-    margin: 0%; text-decoration: none;
-    position: relative;
-    }
-.um {
-    width: 450px;
-    height: 50px;
-    align-items: center;
     padding-right: 15px;
-    }
-.um li{
-    width: 150;
 }
-.um a{
-    text-decoration: none;
-    width: 150px;text-align: justify;
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;font-weight:weight;
-    font-style:normal; position: relative;
-    }
 
-a::after {
-    content: '';
-    position: absolute;
+/* Estilizar o conteúdo da segunda tela */
+.background-div {
     width: 100%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
     background-color: #F3E3D3;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-    border-radius: 2px; /* Adiciona borda arredondada */
-}
-
-a:hover::after {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-.fundo{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    display: flexbox;
-    z-index: 1;
-    background-size: cover;
-}
-
-.imagem {
-    width: 100%;
-    height: 100%;
-}
-
-.logo{
-    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    position: absolute;
-    top: 150px;
-    padding-top: 9%;
-}
-
-.background-image:hover {
-    /* Aplica o zoom na imagem de fundo */
-    transform: scale(1.1);
-}
-/* Fim primeira tela*/
-
-/* Inicio Segunda tela*/
-
-
-  
-  .background-div {
-    width: 100%;
-    height: 100%;
-    background-color: #F3E3D3;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     position: relative;
-  }
-  
-  .nome {
-    padding-top: 20px;
-    padding-left: 20px;
-    color: rgb(90, 56, 20);
-    font-family: "League Spartan", sans-serif;
-    font-size: 25px;
-    font-weight: 700;
-  }
+    padding: 40px;
+}
 
-  .seviços{
-    padding-top: 90px;
-    padding-left: 500px;
+/* Centralizar o título "Serviços" */
+.seviços {
     color: rgb(90, 56, 20);
     font-family: "League Spartan", sans-serif;
     font-size: 45px;
     font-weight: 700;
-  }
-  
-  .container {
+    text-align: center;
+}
+
+/* Container com as opções lado a lado */
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    position: absolute;
-    top: 160%;
-    transform: translateY(-50%);
-    padding-left: 14%;
-    width: 70%; /* Aumentei a largura da container para que os itens possam se expandir */
-    transition: 0.3s ease;
-  }
-  
-  .option {
+    justify-content: space-around;
+    width: 80%; /* Ajustar conforme necessário */
+    gap: 20px; /* Espaçamento entre as opções */
+    margin-top: 20px;
+}
+
+/* Estilos das opções */
+.option {
     width: 300px;
     height: 450px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease, flex-grow 0.3s ease;
     background-color: white;
-    flex-grow: 1; /* Flexível por padrão */
-
-  }
-  
-  .option:hover {
-    transform: scale(1.02); /* Um leve aumento */
-    flex-grow: 2; /* Aumenta a largura ao passar o mouse */
-  }
-  
-  .option:not(:hover) {
-    flex-grow: 1; /* Os outros permanecem com o tamanho original */
-  }
-
-
-/* Fim Segunda tela*/
-
-/* respom */
-@media (width:1280px) and (height:800){
-.cabecalho{
-    position: absolute;
-    width: 99%;
-    height: 40px;
-    background-color:rgba(115, 76, 35, 0.5);
-    margin: 2px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 15px 15px 15px 15px ;
+    transition: transform 0.3s ease;
 }
 
-
-.um ul{width: 500px; }
-
-
-
-.cabecalho li{
-    padding-right: 50px;
-    width: 70px;
+.option:hover {
+    transform: scale(1.05);
 }
 
-.cabecalho p{
-    font-size: 45px;
-}
-
-.cabecalho a{
-    font-size: 30px;
-    }
-}
-@media (width:1366px) and (height:607){
-    .cabecalho{
-        position: absolute;
-        width: 99%;
-        height: 40px;
-        background-color:rgba(115, 76, 35, 0.5);
-        margin: 2px;
-        padding: 5px;
-        display: flex;
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        border-radius: 15px 15px 15px 15px ;
+        gap: 10px;
     }
-    
-    
-    .um ul{width: 500px; }
-    
-    
-    
-    .cabecalho li{
-        padding-right: 50px;
-        width: 70px;
-    }
-    
-    .cabecalho p{
-        font-size: 45px;
-    }
-    
-    .cabecalho a{
-        font-size: 30px;
-        }
-    }
-
-@media (min-width: 1281px) and (max-width: 1500px) {
-    .cabecalho{
-        position: absolute;
-        width: 99%;
-        height: 40px;
-        background-color:rgba(115, 76, 35, 0.5);
-        margin: 2px;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 15px 15px 15px 15px ;
-    }
-
-    .um{ 
-        width: 900px;
-    }
-    
-    .cabecalho li{
-        padding-right: 50px;
-        width: 200px;
-    }
-
-    
-    .cabecalho p{
-        font-size: 28px;
-    }
-    
-    .cabecalho a{
-        font-size: 21px;
-        width: 300px;
-        }
-    }
+}
