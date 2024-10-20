@@ -1,16 +1,15 @@
-/* Estilos gerais */
-HTML body {
-    height: 140vh;
-    margin: 0%;
-    padding: 0%;
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: rgb(90, 56, 20);
     overflow-x: hidden;
 }
 
-/* Cabeçalho */
+/* Inicio primeira tela */
 .cabecalho {
     position: absolute;
-    width: 99%;
+    width: 98.5%;
     height: 40px;
     transform: translateY(10px);
     background-color: rgba(115, 76, 35, 0.5);
@@ -22,67 +21,191 @@ HTML body {
     border-radius: 15px;
 }
 
-/* Colocar "Dionizio" no canto superior direito */
+.cabecalho ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+}
+
 .zero {
-    width: 100%;
-    text-align: right;
+    width: 200px;
 }
 
 .zero p {
+    padding-left: 15px;
     color: #F3E3D3;
+    font-family: "League Spartan", sans-serif;
+}
+
+.cabecalho ul li {
+    margin: 0;
+}
+
+.cabecalho a {
+    color: #F3E3D3;
+    text-decoration: none;
+    position: relative;
+}
+
+.um {
+    width: 450px;
     padding-right: 15px;
 }
 
-/* Estilizar o conteúdo da segunda tela */
-.background-div {
+a::after {
+    content: '';
+    position: absolute;
     width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
     background-color: #F3E3D3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 40px;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
 }
 
-/* Centralizar o título "Serviços" */
-.seviços {
+a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.fundo {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-size: cover;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    top: 150px;
+    padding-top: 9%;
+}
+
+/* Fim primeira tela */
+
+/* Inicio Segunda tela */
+
+.SegundaTela{
+    background-color: #F3E3D3;
+}
+
+.background-div {
+    width: 100%;
+    height: 200px;
+    background-color: #F3E3D3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: static;
+    margin: 0%;
+    padding: 0%;
+}
+
+.background-div h3{
+    padding-top: 90px;
+    display: flex;
     color: rgb(90, 56, 20);
     font-family: "League Spartan", sans-serif;
     font-size: 45px;
     font-weight: 700;
     text-align: center;
+    padding-left: 35%;
 }
 
-/* Container com as opções lado a lado */
+.nome {
+    padding-top: 20px;
+    padding-left: 20px;
+    color: rgb(90, 56, 20);
+    font-family: "League Spartan", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
 .container {
+    width: 100%;
+    height: 500px;
     display: flex;
-    justify-content: space-around;
-    width: 80%; /* Ajustar conforme necessário */
-    gap: 20px; /* Espaçamento entre as opções */
-    margin-top: 20px;
+    gap: 50px;
+    justify-content:center;
+    align-items: center;
+    transition: 0.3s ease;
+    background-color: #F3E3D3;
+    padding: 0%;
+    margin: 0%;
 }
 
-/* Estilos das opções */
 .option {
     width: 300px;
     height: 450px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    overflow: hidden;
     text-align: center;
+    transition: transform 0.3s ease, flex-grow 0.3s ease;
     background-color: white;
-    transition: transform 0.3s ease;
 }
 
 .option:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fim Segunda tela */
+
+/* Media Queries para Responsividade */
+
+/* Para telas grandes (acima de 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+    .option {
+        width: 300px;
+    }
+}
+
+/* Para tablets (entre 768px e 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
     .container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+    }
+    .option {
+        width: 80%;
+    }
+}
+
+/* Para celulares (abaixo de 767px) */
+@media (max-width: 767px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+    .um {
+        width: 100%;
+    }
+    .option {
+        width: 100%;
     }
 }
